@@ -1,0 +1,14 @@
+version: '1.0'
+
+services:
+  terobyte:
+    image: elsama/terobyte:latest
+    container_name: terobyte
+    ports:
+      - "8080:80"
+    environment:
+      - TEROBYTE_PASSWORD: "$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 ; echo '')"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/html:/var/www/html
+    restart: always
