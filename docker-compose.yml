@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:80"
     environment:
-      - TEROBYTE_PASSWORD: "$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 ; echo '')"
+      - TEROBYTE_PASSWORD=password
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - /var/www/html:/var/www/html
