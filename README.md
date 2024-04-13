@@ -20,21 +20,21 @@ Ensure your Linux server is up-to-date and install Apache and PHP:
 ```bash
 sudo apt update
 sudo apt install apache2 php libapache2-mod-php
-
+```
 
 #### Clone the Terobyte repository into the Apache server's root directory, typically /var/www/html/:
-
+```bash
 cd /var/www/html
 sudo git clone https://github.com/yourusername/Terobyte.git
 
 #### Set the correct permissions for the Terobyte directory to ensure the web server can access and execute the scripts:
-
+```bash
 sudo chown -R www-data:www-data /var/www/html/Terobyte
 
 
 ### Accessing the Interface
-Once installed, you can access the Terobyte interface through your web browser by navigating to:
-
+#### Once installed, you can access the Terobyte interface through your web browser by navigating to:
+```bash
 http://your_server_ip/Terobyte/index.html
 
 #### Replace your_server_ip with the actual IP address or domain of your server.
